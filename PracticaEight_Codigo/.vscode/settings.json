@@ -1,0 +1,12 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.portWin": "COM3",
+  "idf.flashType": "UART",
+  "idf.adapterTargetName": "esp32",
+  "C_Cpp.default.compilerPath": "",
+  "files.associations": {
+    "esp_system.h": "c",
+    "esp_partition.h": "c",
+    "mesh_light.h": "c"
+  }
+}
