@@ -1,0 +1,14 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "files.associations": {
+    "stdlib.h": "c",
+    "math.h": "c",
+    "esp_system.h": "c",
+    "esp_event.h": "c",
+    "esp_tls.h": "c"
+  },
+  "idf.portWin": "COM3",
+  "idf.flashType": "UART",
+  "idf.adapterTargetName": "esp32",
+  "C_Cpp.default.compilerPath": ""
+}

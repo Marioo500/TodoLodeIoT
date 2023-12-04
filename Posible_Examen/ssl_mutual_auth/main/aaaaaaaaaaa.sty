@@ -1,0 +1,20 @@
+Usando el ESP32 y el ESP-IDF Development Framework, implemente una red de dos nodos sensores que se comunican por medio de MQTT. Cada nodo consiste en un ESP32, y por lo menos uno de los nodos tiene un sensor.
+
+El nodo A publica cada 500 ms la medición del sensor al tema hospital/piso1/recepcion/<tipo_de_sensor>. Reemplace tipo_de_sensor por el tipo de valor que está enviando, por ejemplo, temperatura, aceleración, etc. Y el mensaje tiene el siguiente formato <ON/OFF>,<medición>, donde ON indica que el sensor está en operación y OFF que no. 
+
+
+El nodo B se suscribe al tema hospital/piso1/recepcion/<tipo_de_sensor> y envía a Thingsboard cada 2 segundos el promedio de las últimas 5 mediciones que recibió en el tema. Las mediciones de los mensajes que indiquen que el sensor está OFF son ignoradas. Si recibe 5 o más mensajes consecutivos que indiquen OFF, el nodo envía a Thingsboard un valor nulo y la indicación de que el sensor está apagado. El nodo vuelve a enviar mensajes a Thingsboard hasta que reciba por lo menos 5 mensajes consecutivos con ON.  
+
+
+El nodo B también presenta al usuario una interfaz web que permita encender y apagar el sensor del nodo A de forma remota, y el usuario puede seleccionar si quiere encender/apagar el sensor en ese momento o con un retardo, por ejemplo, encender/apagar 5 min después de recibir el mensaje. El usuario configura en la interfaz web el estado del sensor (ON/OFF), el nodo B publica el nuevo estado en el tema hospital/piso1/recepcion/config/<tipo_de_sensor>. El nodo A está suscrito a este tema y cuando recibe el mensaje ON activa el sensor y cuando recibe OFF desactiva el sensor. 
+
+
+En Thingsboard cree una alarma que se genere cada vez que reciba una indicación de que el sensor está apagado. Además envíe un correo electrónico
+
+
+La comunicación debe tener cifrado y autenticación. Si la interfaz web para encender/apagar el sensor está almacenada en el ESP32, no es necesario el cifrado y autenticación para la interfaz (para el resto de la comunicación si).
+
+
+
+
+Adjunte un archivo zip con su código fuente: archivos .c, .h, .html, etc. (todos los archivos necesarios para poder verificar su implementación).

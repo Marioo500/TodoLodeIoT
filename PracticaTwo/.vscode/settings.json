@@ -1,0 +1,26 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.flashType": "UART",
+  "idf.portWin": "COM3",
+  "C_Cpp.default.compilerPath": "",
+  "files.associations": {
+    "gpio.h": "c",
+    "esp_log.h": "c",
+    "nvs_flash.h": "c",
+    "err.h": "c",
+    "sys.h": "c",
+    "esp_adc_cal.h": "c",
+    "adc.h": "c",
+    "esp_http_server.h": "c",
+    "esp_event.h": "c",
+    "esp_wifi.h": "c",
+    "esp_mac.h": "c",
+    "task.h": "c",
+    "freertos.h": "c",
+    "http_parser.h": "c",
+    "esp_err.h": "c",
+    "sdkconfig.h": "c",
+    "esp_event_base.h": "c"
+  },
+  "idf.adapterTargetName": "esp32"
+}

@@ -1,0 +1,10 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "files.associations": {
+    "task.h": "c"
+  },
+  "C_Cpp.default.compilerPath": "",
+  "idf.portWin": "COM3",
+  "idf.flashType": "UART",
+  "idf.adapterTargetName": "esp32"
+}

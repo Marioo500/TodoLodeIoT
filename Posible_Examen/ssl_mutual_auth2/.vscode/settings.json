@@ -1,0 +1,8 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "files.associations": {
+    "netfwd": "c"
+  },
+  "idf.flashType": "UART",
+  "idf.portWin": "COM6"
+}
